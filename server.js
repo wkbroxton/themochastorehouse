@@ -3,10 +3,17 @@ const express = require('express');
 const path = require('path');
 const cookieParser = require('cookie-parser');
 const logger = require('morgan');
+const methodOverride = require('method-override');
+const session = require('express-session');
+const passport = require('passport');
+
+require('dotenv').config();
+require('./config/database');
+require('./config/passport');
 
 const indexRouter = require('./routes/index');
-const storesRouter = require('./routes/stores');
-const reviewsRouter = require('./routes/reviews');
+// const storesRouter = require('./routes/stores');
+// const reviewsRouter = require('./routes/reviews');
 
 const app = express();
 
@@ -18,11 +25,28 @@ app.use(logger('dev'));
 app.use(express.json());
 app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
+app.use(methodOverride('_method'));
+
 app.use(express.static(path.join(__dirname, 'public')));
+app.use(session({
+  secret: process.env.SECRET,
+  resave: false,
+  saveUninitialized: true
+}));
+
+app.use(passport.initialize());
+app.use(passport.session());
+
+// middleware to add req.user to the res.locals object
+// making user available to every ejs view
+app.use(function(req, res, next) {
+  res.locals.user = req.user;
+  next();
+});
 
 app.use('/', indexRouter);
-app.use('/stores', storesRouter);
-app.use('/', reviewsRouter);
+// app.use('/stores', storesRouter);
+// app.use('/', reviewsRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {
