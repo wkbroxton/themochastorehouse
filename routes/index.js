@@ -4,7 +4,7 @@ const passport = require('passport');
 
 /* GET home page. */
 router.get('/', function(req, res, next) {
-  res.render('index', { title: 'Welcome to The Mocha Storehouse' });
+  res.render('home', { title: 'Welcome to The Mocha Storehouse' });
 });
 
 router.get(

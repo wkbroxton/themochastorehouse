@@ -12,7 +12,7 @@ require('./config/database');
 require('./config/passport');
 
 const indexRouter = require('./routes/index');
-// const storesRouter = require('./routes/stores');
+const businessesRouter = require('./routes/businesses');
 // const reviewsRouter = require('./routes/reviews');
 
 const app = express();
@@ -45,7 +45,7 @@ app.use(function(req, res, next) {
 });
 
 app.use('/', indexRouter);
-// app.use('/stores', storesRouter);
+app.use('/businesses', businessesRouter);
 // app.use('/', reviewsRouter);
 
 // catch 404 and forward to error handler

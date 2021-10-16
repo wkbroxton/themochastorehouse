@@ -7,21 +7,20 @@
   <link rel='stylesheet' href='/stylesheets/style.css' />
 </head>
 <body>
-  <h1><%= title %></h1>
-  <p>"Serving your blend of the best of Black Businesses"</p>
   <nav>
     <a href="/">HOME</a>
-    <img src="/images/camera.svg">
-    <a href="/stores" <%- title === 'All Movies' ? 'class="active"' : '' %>>ALL MOVIES</a>
+    <img src="https://i.imgur.com/CQkpOty.png">
+    <a href="/businesses" <%- title === 'All Businesses' ? 'class="active"' : '' %>>ALL BUSINSSES</a>
     <% if (user) { %>
-      <h1>Welcome <%= user.name %></h1>
-      <a href="/performers/new"	<%- title === 'Add Performer' ? 'class="active"' : '' %>>
-		ADD PERFORMER</a>
-      <a href="/stores/new" <%- title === 'Add Movie' ? 'class="active"' : '' %>>ADD BUSINESS</a>
-      <a href="/logout">LOG OUT</a>
-    <% } else { %>
-      <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
-    <% } %>
-  </nav>
+      <h3>Welcome <%= user.name %></h3>
+      <!-- <a href="/performers/new"	<%- title === 'Add Performer' ? 'class="active"' : '' %>>
+        ADD PERFORMER</a> -->
+        <a href="/businesses/new" <%- title === 'Add Business' ? 'class="active"' : '' %>>ADD BUSINESS</a>
+        <a href="/logout">LOG OUT</a>
+        <% } else { %>
+          <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
+          <% } %>
+        </nav>
   <main>
     <h1><%= title %></h1>
+    <p>"Serving your blend of the best of Brown Businesses"</p>
