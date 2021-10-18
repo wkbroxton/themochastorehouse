@@ -188,3 +188,12 @@ li {
   border-radius: 50%;
   height: 40px;
 }
+
+#reviews-containers {
+  display: flex;
+  flex-direction: column;
+}
+
+/* #reviews-containers div {
+  width: 95vw
+} */

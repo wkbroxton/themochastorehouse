@@ -1,0 +1,29 @@
+<%- include('../partials/header') %>
+
+  <form id="new-form" action="/businesses" method="POST">
+    <label>Name:</label>
+    <input type="text" name="name">
+    <label>Address:</label>
+    <input type="text" name="address">
+    <label>Website:</label>
+    <input type="text" name="link">
+    <label>Phone:</label>
+    <input type="text" name="phone">
+    <label>Email:</label>
+    <input type="text" name="email">
+    <label>Catagory:</label>
+    <select name="catagory" multiple>
+      <option value="Resturant">Resturant</option>
+      <option value="Goods & Services">Goods & Services</option>
+      <option value="Child Care & Home Services">Child Care & Home Services</option>
+      <option value="Event Services">Event Services</option>
+      <option value="Audio & Visual Production">Audio & Visual Production</option>
+      <option value="Business Services">Business Services</option>
+      <option value="Ecommerce">Ecommerce</option>
+      <option value="Health & Beauty">Health & Beauty</option>
+    </select>
+    <input type="submit" value="Add Business">
+
+  </form>
+
+  <%- include('../partials/footer') %>

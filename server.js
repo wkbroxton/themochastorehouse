@@ -13,7 +13,8 @@ require('./config/passport');
 
 const indexRouter = require('./routes/index');
 const businessesRouter = require('./routes/businesses');
-// const reviewsRouter = require('./routes/reviews');
+const reviewsRouter = require('./routes/reviews');
+// const usersRouter = require('./routes/users');
 
 const app = express();
 
@@ -27,7 +28,6 @@ app.use(express.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(methodOverride('_method'));
 
-app.use(express.static(path.join(__dirname, 'public')));
 app.use(session({
   secret: process.env.SECRET,
   resave: false,
@@ -44,9 +44,14 @@ app.use(function(req, res, next) {
   next();
 });
 
+app.use(express.static(path.join(__dirname, 'public')));
+
+const isLoggedIn = require('./config/auth');
+
 app.use('/', indexRouter);
 app.use('/businesses', businessesRouter);
-// app.use('/', reviewsRouter);
+app.use('/', isLoggedIn, reviewsRouter);
+// app.use('/', isLoggedIn, usersRouter);
 
 // catch 404 and forward to error handler
 app.use(function(req, res, next) {

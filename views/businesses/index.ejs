@@ -3,17 +3,21 @@
 <table id="list">
     <thead>
       <tr>
-        <th>Title</th>
-        <th>Release<br>Year</th>
-        <th></th>
+        <th>Business Name</th>
+        <th>Catagory</th>
+        <% if(user){ %>
+          <th></th> 
+        <% }%> 
       </tr>
     </thead>
     <tbody>
       <% businesses.forEach(function(b) { %>
         <tr>
-          <td><%= b.title %></td>
-          <td><%= b.releaseYear %></td>
-          <td><a href="/businesses/<%= b._id %>">DETAILS</a></td>
+          <td><%= b.name %></td>
+          <td><%= b.catagory %></td>
+          <% if(user){ %>
+            <td><a href="/businesses/<%= b._id %>">DETAILS</a></td>
+        <%  }%>
         </tr>
         <% }); %>
       </tbody>

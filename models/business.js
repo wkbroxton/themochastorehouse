@@ -21,12 +21,10 @@ const businessSchema = new Schema({
     link: String,
     phone: String,
     email: String,
-    tag: ([String]),
+    catagory: String,
     reviews: [reviewSchema]
 }, {
     timestamps: true
   });
-
-
 
 module.exports = mongoose.model('Business', businessSchema);
