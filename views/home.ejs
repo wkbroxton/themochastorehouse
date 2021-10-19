@@ -1,10 +1,42 @@
-<%- include('./partials/header') %>
-<video playsinline autoplay muted loop poster="polina.jpg" id="bgvid">
-    <source src="polina.webm" type="video/webm">
-    <source src="polina.mp4" type="video/mp4">
-  </video>
+<!DOCTYPE html>
+<html lang="en">
 
-<h1>Exploring</h1>
-<span>THE MOCHA MANTLE BUSINSSES</span>
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta http-equiv="X-UA-Compatible" content="ie=edge">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Josefin+Sans&display=swap" rel="stylesheet">
+  <link rel='stylesheet' href='/stylesheets/style.css' />
+</head>
 
-<%- include('./partials/footer') %>
+<body>
+  <nav>
+    <a href="/">HOME</a>
+    <img src="https://i.imgur.com/CQkpOty.png">
+    <a href="/businesses" <%- title==='All Businesses' ? 'class="active"' : '' %>>ALL BUSINSSES</a>
+    <% if (user) { %>
+      <h3>Welcome <%= user.name %>
+      </h3>
+      <a href="/businesses/new" <%- title==='Add Business' ? 'class="active"' : '' %>>ADD BUSINESS</a>
+      <a href="/logout">LOG OUT</a>
+      <% } else { %>
+        <a href="/auth/google" class="login">LOG IN&nbsp;<img src="https://i.imgur.com/FHjYyi0.png"></a>
+        <% } %>
+  </nav>
+  <main>
+    <div class="container">
+      <img src="https://i.imgur.com/z3IgCcE.jpg" alt="BG" style="width:100%;">
+
+      <div class="centered"> 
+        <h1>
+          <%= title %>
+        </h1>
+        <p>"Serving your blend of the best of Brown Businesses"</p>
+    
+        <h1>Exploring</h1>
+        <span>THE MOCHA MANTLE BUSINSSES</span></div>
+    </div>
+
+    <%- include('./partials/footer') %>
