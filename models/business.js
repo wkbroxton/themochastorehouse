@@ -24,6 +24,7 @@ const businessSchema = new Schema({
     catagory: String,
     reviews: [reviewSchema],
     user: {type: Schema.Types.ObjectId, ref: 'User'},
+    favs: [{type: Schema.Types.ObjectId, ref: 'User'}]
 }, {
     timestamps: true
   });

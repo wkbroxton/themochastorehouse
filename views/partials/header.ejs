@@ -16,6 +16,7 @@
     <a href="/businesses" <%- title === 'All Businesses' ? 'class="active"' : '' %>>ALL BUSINSSES</a>
     <% if (user) { %>
       <h3>Welcome <%= user.name %></h3>
+      <a href="/businesses/favs" <%- title==='My Favorite Business' ? 'class="active"' : '' %>>MY FAVS</a>
         <a href="/businesses/new" <%- title === 'Add Business' ? 'class="active"' : '' %>>ADD BUSINESS</a>
         <a href="/logout">LOG OUT</a>
         <% } else { %>

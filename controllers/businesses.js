@@ -1,3 +1,4 @@
+const business = require('../models/business');
 const Business = require('../models/business');
 
 module.exports = {
@@ -7,7 +8,9 @@ module.exports = {
   create,
   delete: deleteBusiness,
   edit,
-  update
+  update,
+  addFav,
+  viewFavs
 };
 
 function index(req, res) {
@@ -57,5 +60,21 @@ function update(req, res) {
       res.render("businesses/edit", { business, title: "Edit Business" });
     }
     res.redirect(`/businesses/${business._id}`);
+  });
+}
+
+function addFav(req, res) {
+  Business.findById(req.params.id, function(err, business){
+    business.favs.push(req.user._id);
+    business.save(function(err){
+      res.redirect(`/businesses/${business._id}`);
+    });
+  });
+}
+
+function viewFavs(req, res) {
+  Business.find({"favs._id": req.user._id }, function(err, businesses){
+    console.log(businesses);
+    res.render('businesses/index', { title: 'My Favorite Businesses', businesses });
   });
 }
