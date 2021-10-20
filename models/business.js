@@ -22,7 +22,8 @@ const businessSchema = new Schema({
     phone: String,
     email: String,
     catagory: String,
-    reviews: [reviewSchema]
+    reviews: [reviewSchema],
+    user: {type: Schema.Types.ObjectId, ref: 'User'},
 }, {
     timestamps: true
   });

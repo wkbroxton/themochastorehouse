@@ -67,8 +67,7 @@ nav > a.active {
 }
 
 #new-form *,
-#add-review-form *,
-#add-performer-form * {
+#add-review-form *{
   font-size: 20px;
   padding: 5px;
   border-radius: 5px;
@@ -120,18 +119,16 @@ table td {
   font-weight: bold;
 }
 
-#add-review-form,
-#add-performer-form {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-gap: 1rem;
-  margin-bottom: 2rem;
+#add-review-form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
 }
 
-#add-review-form input[type="submit"],
-#add-performer-form input[type="submit"]  {
+#add-review-form input[type="submit"]  {
   width: 10rem;
-  grid-column: 2 / 3;
+  margin: 0 auto;
 }
 
 hr {
@@ -243,4 +240,13 @@ li {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
+}
+
+span {
+  font-size: px;
+}
+
+a:visited {
+  text-decoration: none;
+  color: black;
 }

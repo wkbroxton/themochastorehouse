@@ -4,7 +4,10 @@ module.exports = {
   index,
   show,
   new: newBusiness,
-  create
+  create,
+  delete: deleteBusiness,
+  edit,
+  update
 };
 
 function index(req, res) {
@@ -25,9 +28,34 @@ function newBusiness(req, res) {
 
 function create(req, res) {
   const business = new Business(req.body);
+  business.user = req.user._id; // How we assigned ownwership to the Business to specific User
   business.save(function (err) {
     if (err) return res.redirect('/businesses/new');
     console.log(err);
     res.redirect('/businesses');
+  });
+}
+
+function deleteBusiness(req, res) {
+  Business.findByIdAndDelete(req.params.id, function(err){
+    res.redirect("/businesses");
+  });
+}
+
+function edit(req, res) {
+  Business.findById(req.params.id, function (err, business) {
+    if (err) {
+      res.redirect(`/businesses/${req.params.id}`);
+    }
+    res.render("/:id/edit", { business, title: "Edit Business" });
+  });
+}
+
+function update(req, res) {
+  Business.findByIdAndUpdate(req.params.id, req.body, function (err, business) {
+    if (err) {
+      res.render("businesses/edit", { business, title: "Edit Business" });
+    }
+    res.redirect(`businesses/${business._id}`);
   });
 }

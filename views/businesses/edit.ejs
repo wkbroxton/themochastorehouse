@@ -1,0 +1,30 @@
+<%- include('../partials/header') %>
+
+    <form id="edit-form" action="/businesses" method="POST">
+        <label>Edit Name:</label>
+             <input type="text" name="name" value="<%= business.name %>">
+        <label>Edit Address:</label>
+                <input type="text" name="address" value="<%= business.address %>">
+        <label>Edit Website:</label>
+             <input type="text" name="link" value="<%= business.link %>">
+        <label>Edit Phone:</label>
+             <input type="text" name="phone" value="<%= business.phone %>">
+        <label>Edit Email:</label>
+             <input type="text" name="email" value="<%= business.email %>">
+        <label>Edit Catagory:</label>
+            <select name="catagory" value="<%= business.catagory %>">
+                <option value="Audio & Visual Production">Audio & Visual Production</option>
+                <option value="Business Services">Business Services</option>
+                <option value="Child Care & Home Services">Child Care & Home Services</option>
+                <option value="Content Creator">Content Creator</option>
+                <option value="Ecommerce">Ecommerce</option>
+                <option value="Event Services">Event Services</option>
+                <option value="Goods & Services">Goods & Services</option>
+                <option value="Health & Beauty">Health & Beauty</option>
+                <option value="Resturant">Resturant</option>
+            </select>
+        <button class="submit-button" type="submit">Accept Changes</button>
+    
+    </form>
+
+    <%- include('../partials/footer') %>
