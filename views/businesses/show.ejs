@@ -9,7 +9,7 @@
     <div>
       <%= business.address %>
     </div>
-    <div>Website: </div>
+    <div>Website: </div>mvp
     <div>
       <%= business.link %>
     </div>
@@ -26,11 +26,12 @@
       <%= business.tag %>
     </div>
   </section>
-  <br><br>
   <% if (user._id.equals(business.user)) { %>
-    <a class="buttom" href="/businesses/<%= business._id %>/edit">EDIT BUSINESS</a>
+    <form action="/businesses/<%= business._id %>/edit">
+      <button type="submit">Edit Business</button>
+    </form>
     <% }%>
-
+    <br><br>
       <h2>Reviews</h2>
       <div id="reviews-containers">
         <% if (user) { %>
