@@ -14,14 +14,14 @@
         <label>Edit Catagory:</label>
             <select name="catagory" value="<%= business.catagory %>">
                 <option <%= business.catagory === "Audio & Visual Production" ? "selected" : "" %> value="Audio & Visual Production">Audio & Visual Production</option>
-                <option value="Business Services">Business Services</option>
-                <option value="Child Care & Home Services">Child Care & Home Services</option>
+                <option <%= business.catagory === "Business Services" ? "selected" : "" %> value="Business Services">Business Services</option>
+                <option <%= business.catagory === "Child Care & Home Services" ? "selected" : "" %> value="Child Care & Home Services">Child Care & Home Services</option>
                 <option <%= business.catagory === "Content Creator" ? "selected" : "" %> value="Content Creator">Content Creator</option>
-                <option value="Ecommerce">Ecommerce</option>
-                <option value="Event Services">Event Services</option>
-                <option value="Goods & Services">Goods & Services</option>
-                <option value="Health & Beauty">Health & Beauty</option>
-                <option value="Resturant">Resturant</option>
+                <option <%= business.catagory === "Ecommerce" ? "selected" : "" %> value="Ecommerce">Ecommerce</option>
+                <option <%= business.catagory === "Event Services" ? "selected" : "" %> value="Event Services">Event Services</option>
+                <option <%= business.catagory === "Goods & Services" ? "selected" : "" %> value="Goods & Services">Goods & Services</option>
+                <option <%= business.catagory === "Health & Beauty" ? "selected" : "" %> value="Health & Beauty">Health & Beauty</option>
+                <option <%= business.catagory === "Resturant" ? "selected" : "" %> value="Resturant">Resturant</option>
             </select>
           <form action="/businesses/<%= business._id %>?_method=PUT" method="POST">
         <button class="submit-button" type="submit">Accept Changes</button>

@@ -238,19 +238,3 @@ a:visited {
   padding: .5em;
   text-decoration: none;
 }
-
-.button:focus,
-.button:hover {
-  background-color: FireBrick;
-  color: White;
-}
-
-.content {
-  display: none;
-  margin: 1em 0;
-}
-
-.content.active,
-.no-js .content {
-  display: block;
-}
