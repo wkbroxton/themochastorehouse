@@ -47,7 +47,7 @@ function edit(req, res) {
     if (err) {
       res.redirect(`/businesses/${req.params.id}`);
     }
-    res.render("/:id/edit", { business, title: "Edit Business" });
+    res.render("businesses/edit", { business, title: "Edit Business" });
   });
 }
 
@@ -56,6 +56,6 @@ function update(req, res) {
     if (err) {
       res.render("businesses/edit", { business, title: "Edit Business" });
     }
-    res.redirect(`businesses/${business._id}`);
+    res.redirect(`/businesses/${business._id}`);
   });
 }

@@ -60,14 +60,16 @@ nav > a.active {
   cursor: default;
 }
 
-#new-form {
+#new-form,
+#edit-form {
   display: grid;
   grid-gap: 10px;
   grid-template-columns: repeat(2, minmax(auto, 22rem));
 }
 
 #new-form *,
-#add-review-form *{
+#add-review-form,
+#edit-form *{
   font-size: 20px;
   padding: 5px;
   border-radius: 5px;
@@ -120,6 +122,13 @@ table td {
 }
 
 #add-review-form {
+  display: flex;
+  flex-direction: column;
+  text-align: center;
+  justify-content: center;
+}
+
+#review-list {
   display: flex;
   flex-direction: column;
   text-align: center;
@@ -205,35 +214,6 @@ li {
   color: white;
 }
 
-/* Bottom left text */
-.bottom-left {
-  position: absolute;
-  bottom: 8px;
-  left: 16px;
-}
-
-/* Top left text */
-.top-left {
-  position: absolute;
-  top: 8px;
-  left: 16px;
-}
-
-/* Top right text */
-.top-right {
-  position: absolute;
-  top: 8px;
-  right: 16px;
-}
-
-/* Bottom right text */
-.bottom-right {
-  position: absolute;
-  bottom: 8px;
-  right: 16px;
-}
-
-/* Centered text */
 .centered {
   color: #ffffff;
   position: absolute;

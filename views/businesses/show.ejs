@@ -28,29 +28,29 @@
   </section>
   <br><br>
   <% if (user._id.equals(business.user)) { %>
-    <td><a href="/businesses/:id/edit<%= business._id %>">EDIT BUSINESS</a></td>
+    <a class="buttom" href="/businesses/<%= business._id %>/edit">EDIT BUSINESS</a>
     <% }%>
 
-  <h2>Reviews</h2>
-  <div id="reviews-containers">
-    <% if (user) { %>
-      <form id="add-review-form" method="POST" action="/businesses/<%= business._id %>/reviews">
-        <label>Rating:</label>
-        <select name="rating">
-          <option value="1">1</option>
-          <option value="2">2</option>
-          <option value="3">3</option>
-          <option value="4">4</option>
-          <option value="5">5</option>
-        </select>
-        <label>Review:</label>
-        <textarea name="content"></textarea>
-        <input type="submit" value="Add Review">
-      </form>
-      <% } %>
-
-
-            <div>
+      <h2>Reviews</h2>
+      <div id="reviews-containers">
+        <% if (user) { %>
+          <form id="add-review-form" method="POST" action="/businesses/<%= business._id %>/reviews">
+            <label>Rating:</label>
+            <select name="rating">
+              <option value="1">1</option>
+              <option value="2">2</option>
+              <option value="3">3</option>
+              <option value="4">4</option>
+              <option value="5">5</option>
+            </select>
+            <label>Review:</label>
+            <textarea name="content"></textarea>
+            <input type="submit" value="Add Review">
+          </form>
+          <% } %>
+            <br>
+            <br>
+            <div id="review-list">
               <% if (business.reviews.length) { %>
                 <table>
                   <thead>
@@ -59,7 +59,6 @@
                       <th>Date</th>
                       <th>Review</th>
                       <th>Rating</th>
-                      <th></th>
                     </tr>
                   </thead>
                   <tbody>
@@ -107,5 +106,5 @@
                 <button type="submit">Delete the Business</button>
               </form>
               <% }%>
-  </div>
-  <%- include('../partials/footer') %>
+      </div>
+      <%- include('../partials/footer') %>
