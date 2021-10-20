@@ -73,7 +73,7 @@ function addFav(req, res) {
 }
 
 function viewFavs(req, res) {
-  Business.find({"favs._id": req.user._id }, function(err, businesses){
+  Business.find({"favs": req.user._id }, function(err, businesses){
     console.log(businesses);
     res.render('businesses/index', { title: 'My Favorite Businesses', businesses });
   });

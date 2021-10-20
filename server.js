@@ -37,8 +37,6 @@ app.use(session({
 app.use(passport.initialize());
 app.use(passport.session());
 
-// middleware to add req.user to the res.locals object
-// making user available to every ejs view
 app.use(function(req, res, next) {
   res.locals.user = req.user;
   next();
