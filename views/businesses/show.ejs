@@ -1,54 +1,77 @@
 <%- include('../partials/header') %>
-  <br>
-  <div id="biz-show-img">
-    <img src="<%= business.image_URL %>" class="card-img-top">
-</div>
-  <form action="/businesses/<%= business._id %>/favs" method="POST">
-    <br>
-    <section id="add-favs">
-      <div>Add to Favorites</div>
-      <button> ❤️ </button>
-    </section>
-    <br>
-  </form>
-  <section id="show-page" data-businessid="<%= business._id %>">
-    <div>Name: </div>
-    <div>
-      <%= business.name %>
-    </div>
-    <div>Description: </div>
-    <div>
-      <%= business.description %>
-    </div>
-    <div>Address: </div>
-    <div>
-      <%= business.address %>
-    </div>
-    <div>Website: </div>
-    <div>
-      <%= business.link %>
-    </div>
-    <div>Phone: </div>
-    <div>
-      <%= business.phone %>
-    </div>
-    <div>Email: </div>
-    <div>
-      <%= business.email %>
-    </div>
-    <div>Category: </div>
-    <div>
-      <%= business.category %>
-    </div>
+
+<main id="show-business">
+  <section id="top">
+    <aside id="left">
+      <img id="biz-show-img" src="<%= business.image_URL %>" class="card-img-top">
+      <div id="button-div">
+        <section id="add-favs">
+          <div>Add to Favorites</div>
+          <form action="/businesses/<%= business._id %>/favs" method="POST">
+            <button type="submit"> ❤️ </button>
+          </form>
+        </section>
+        <section>
+          <% if (user._id.equals(business.user)) { %>
+            <form action="/businesses/<%= business._id %>/edit">
+              <button type="submit">Edit Business</button>
+            </form>
+            <% }%>
+        </section>
+        <section>
+        <% if (user._id.equals(business.user)) { %>
+          <div id="delete-form">
+            <button id="start-delete">Delete Business</button>
+          </div>
+          <% }%>
+        </section>
+      </div>
+    </aside>
+    <aside id="right">
+      <section id="show-page" data-businessid="<%= business._id %>">
+        <div>Name: </div>
+        <div>
+          <%= business.name %>
+        </div>
+        <div>Description: </div>
+        <div>
+          <%= business.description %>
+        </div>
+        <div>Address: </div>
+        <div>
+          <%= business.address %>
+        </div>
+        <div>Website: </div>
+        <div>
+          <%= business.link %>
+        </div>
+        <div>Phone: </div>
+        <div>
+          <%= business.phone %>
+        </div>
+        <div>Email: </div>
+        <div>
+          <%= business.email %>
+        </div>
+        <div>Category: </div>
+        <div>
+          <%= business.category %>
+        </div>
+      </section>
+
+    </aside>
+
   </section>
-  <br>
-  <section>
-    <% if (user._id.equals(business.user)) { %>
-      <form action="/businesses/<%= business._id %>/edit">
-        <button type="submit">Edit Business</button>
-      </form>
-      <% }%>
+
+  <section id="bottom">
+
   </section>
+
+</main>
+
+
+  
+  <br>
   <br><br>
   <h2>Reviews</h2>
   <section>
@@ -63,7 +86,7 @@
             <option value="4">4</option>
             <option value="5">5</option>
           </select>
-          <label>Review:</label>
+          <label>Leave a Review:</label>
           <textarea name="content"></textarea>
           <input type="submit" value="Add Review">
         </form>
@@ -120,14 +143,7 @@
                 <% } %>
           </div>
   </section>
-  <br>
-  <br>
-  <% if (user._id.equals(business.user)) { %>
-    <div id="delete-form">
-      <button id="start-delete">Delete Business</button>
-    </div>
-    <% }%>
-      </div>
+</main>
       <script>
         const businessID = document.querySelector("#show-page").dataset.businessid;
         const template = `

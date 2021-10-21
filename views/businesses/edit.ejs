@@ -1,5 +1,5 @@
 <%- include('../partials/header') %>
-
+<div class="center">
      <form id="edit-form" action="/businesses/<%= business._id %>?_method=PUT" method="POST">
           <label>Edit Image URL:</label>
           <input type="text" name="image_URL" value="<%= business.image_URL %>">
@@ -34,9 +34,7 @@
                     Beauty</option>
                <option <%=business.category==="Resturant" ? "selected" : "" %> value="Resturant">Resturant</option>
           </select>
-          <form action="/businesses/<%= business._id %>?_method=PUT" method="POST">
                <button class="submit-button" type="submit">Accept Changes</button>
-
           </form>
-
+     </div>
           <%- include('../partials/footer') %>

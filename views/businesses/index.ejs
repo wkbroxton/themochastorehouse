@@ -15,11 +15,11 @@
             </p>
           </div>
           <ul class="list-group list-group-flush">
-            <li class="list-group-item">
+            <li id="index-category" class="list-group-item">
               Category:&nbsp;&nbsp;<%= b.category %>
             </li>
           </ul>
-          <div class="card-body">
+          <div id="index-detail" class="card-body">
             <% if (user) { %>
               <a href="/businesses/<%= b._id %>">DETAILS</a>
               <% } %>

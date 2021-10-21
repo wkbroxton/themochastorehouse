@@ -30,13 +30,8 @@ nav > img {
   margin-right: auto;
 }
 
-body > main {
-  /* grid-area: main; */
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #ffffff;
-  overflow-y: scroll;
+header {
+text-align: center;
 }
 
 body > main h1:first-child {
@@ -69,7 +64,6 @@ nav > a.active {
 }
 
 #new-form *,
-#show-page *,
 #add-review-form,
 #edit-form *{
   font-size: 20px;
@@ -113,7 +107,7 @@ table td {
   background-color: white;
 }
 
-#show-page div:nth-child(even) {
+#show-page div:nth-child(odd) {
   font-weight: bold;
 }
 
@@ -292,11 +286,59 @@ h3 {
 }
 
 #biz-show-img {
-  max-width: 600px;
+  width: 45vw;
 }
 
+#index-detail,
+#index-category {
+  margin-top: auto;
+  display: flex;
+  justify-content: center;
+  align-items: flex-end
+}
 
+#show-business {
+  display: flex;
+  flex-direction: column;
+}
+#top {
+  display: flex;
+  justify-content: space-evenly;
+}
 
+#left {
+  width: 55vw;
+  display: flex;
+  justify-content: center;
+  flex-direction: column;
+  align-items: center;
+}
+
+#right {
+  width: 42vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#button-div {
+  display: flex;
+  justify-content: space-between;
+  width: 45vw;
+  margin-top: 2vmin;
+}
+
+#show-page {
+  font-size: 30px;
+}
+
+.center {
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 3vmin;
+}
 /* ----------- iPhone 6+, 7+ and 8+ ----------- */
 
 /* Portrait and Landscape */
