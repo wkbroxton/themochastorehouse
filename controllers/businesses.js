@@ -40,7 +40,7 @@ function create(req, res) {
 }
 
 function deleteBusiness(req, res) {
-  Business.findByIdAndDelete(req.params.id, function(err){
+  Business.findByIdAndDelete(req.params.id, function (err) {
     res.redirect("/businesses");
   });
 }
@@ -64,16 +64,16 @@ function update(req, res) {
 }
 
 function addFav(req, res) {
-  Business.findById(req.params.id, function(err, business){
+  Business.findById(req.params.id, function (err, business) {
     business.favs.push(req.user._id);
-    business.save(function(err){
+    business.save(function (err) {
       res.redirect(`/businesses/${business._id}`);
     });
   });
 }
 
 function viewFavs(req, res) {
-  Business.find({"favs": req.user._id }, function(err, businesses){
+  Business.find({ "favs": req.user._id }, function (err, businesses) {
     console.log(businesses);
     res.render('businesses/index', { title: 'My Favorite Businesses', businesses });
   });

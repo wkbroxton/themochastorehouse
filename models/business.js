@@ -17,6 +17,8 @@ const businessSchema = new Schema({
         type: String,
         required: true
     },
+    description: String,
+    image_URL: String,
     address: String,
     link: String,
     phone: String,
