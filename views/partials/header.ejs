@@ -14,7 +14,7 @@
   <nav id="my-page-nav">
     <a href="/">HOME</a>
     <img src="https://i.imgur.com/CQkpOty.png">
-    <a href="/businesses" <%- title === 'All Businesses' ? 'class="active"' : '' %>>ALL BUSINSSES</a>
+    <a href="/businesses" <%- title === 'All Businesses' ? 'class="active"' : '' %>>ALL BUSINESSES</a>
     <% if (user) { %>
       <h3>Welcome <%= user.name %></h3>
       <a href="/businesses/favs" <%- title==='My Favorite Business' ? 'class="active"' : '' %>>MY FAVS</a>
@@ -25,5 +25,6 @@
           <% } %>
         </nav>
   <main>
+    <br><br>
     <h1><%= title %></h1>
     <p>"Serving your blend of the best of Brown Businesses"</p>

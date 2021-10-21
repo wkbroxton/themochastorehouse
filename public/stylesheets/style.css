@@ -61,6 +61,7 @@ nav > a.active {
 }
 
 #new-form,
+#show-page,
 #edit-form {
   display: grid;
   grid-gap: 10px;
@@ -68,6 +69,7 @@ nav > a.active {
 }
 
 #new-form *,
+#show-page *,
 #add-review-form,
 #edit-form *{
   font-size: 20px;
@@ -111,12 +113,6 @@ table td {
   background-color: white;
 }
 
-#show-page {
-  display: grid;
-  grid-template-columns: auto auto;
-  grid-gap: 1rem;
-}
-
 #show-page div:nth-child(even) {
   font-weight: bold;
 }
@@ -147,7 +143,7 @@ hr {
 #badge-container {
   display: flex;
   flex-wrap: wrap;
-  /* padding: 1rem; */
+  padding: 1rem;
   width: 80%;
   border: 2px solid #B8C0C2;
   border-radius: .5rem;
@@ -223,7 +219,7 @@ li {
 }
 
 span {
-  font-size: px;
+  font-size: 3vw;
 }
 
 a:visited {
@@ -239,37 +235,56 @@ a:visited {
   text-decoration: none;
 }
 
-  #my-page-nav {
- 
-    color: #000000;
-    grid-area: nav;
-    background-color: #AC6935;
-    display: flex;
-    justify-content: flex-end;
-    align-items: center;
-    padding: 0 20px 0 30px;
-  }
-  
-  #my-page-nav > img {
-    width: 34px;
-    object-fit: contain;
-    margin-right: auto;
-  }
- 
-  #my-page-nav > a {
- 
-    margin: 20px;
-    text-decoration: none;
-    padding: 10px;
-    border-radius: 5px;
-  }
- 
-  #my-page-nav > a:hover:not(.active) {
-    color: white;
-    background-color: #424748;
-  }
-  
-  #my-page-nav > a.active {
-    color: white;
-    cursor: default;
-  }
+#my-page-nav {
+
+  color: #000000;
+  grid-area: nav;
+  background-color: #AC6935;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+  padding: 0 20px 0 30px;
+}
+
+#my-page-nav > img {
+  width: 34px;
+  object-fit: contain;
+  margin-right: auto;
+}
+
+#my-page-nav > a {
+
+  margin: 20px;
+  text-decoration: none;
+  padding: 10px;
+  border-radius: 5px;
+}
+
+#my-page-nav > a:hover:not(.active) {
+  color: white;
+  background-color: #424748;
+}
+
+#my-page-nav > a.active {
+  color: white;
+  cursor: default;
+}
+
+.col {
+  margin: 10px;
+  text-align: center;
+}
+
+h3 {
+  display: block;
+  font-size: 1.17em;
+  margin-block-start: 1em;
+  margin-block-end: 1em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+  font-weight: bold;
+}
+
+#add-favs {
+  text-align: center;
+}
