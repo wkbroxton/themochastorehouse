@@ -15,24 +15,24 @@
           <input type="text" name="phone" value="<%= business.phone %>">
           <label>Edit Email:</label>
           <input type="text" name="email" value="<%= business.email %>">
-          <label>Edit Catagory:</label>
-          <select name="catagory" value="<%= business.catagory %>">
-               <option <%=business.catagory==="Audio & Visual Production" ? "selected" : "" %> value="Audio & Visual
+          <label>Edit Category:</label>
+          <select name="category" value="<%= business.category %>">
+               <option <%=business.category==="Audio & Visual Production" ? "selected" : "" %> value="Audio & Visual
                     Production">Audio & Visual Production</option>
-               <option <%=business.catagory==="Business Services" ? "selected" : "" %> value="Business
+               <option <%=business.category==="Business Services" ? "selected" : "" %> value="Business
                     Services">Business Services</option>
-               <option <%=business.catagory==="Child Care & Home Services" ? "selected" : "" %> value="Child Care & Home
+               <option <%=business.category==="Child Care & Home Services" ? "selected" : "" %> value="Child Care & Home
                     Services">Child Care & Home Services</option>
-               <option <%=business.catagory==="Content Creator" ? "selected" : "" %> value="Content Creator">Content
+               <option <%=business.category==="Content Creator" ? "selected" : "" %> value="Content Creator">Content
                     Creator</option>
-               <option <%=business.catagory==="Ecommerce" ? "selected" : "" %> value="Ecommerce">Ecommerce</option>
-               <option <%=business.catagory==="Event Services" ? "selected" : "" %> value="Event Services">Event
+               <option <%=business.category==="Ecommerce" ? "selected" : "" %> value="Ecommerce">Ecommerce</option>
+               <option <%=business.category==="Event Services" ? "selected" : "" %> value="Event Services">Event
                     Services</option>
-               <option <%=business.catagory==="Goods & Services" ? "selected" : "" %> value="Goods & Services">Goods &
+               <option <%=business.category==="Goods & Services" ? "selected" : "" %> value="Goods & Services">Goods &
                     Services</option>
-               <option <%=business.catagory==="Health & Beauty" ? "selected" : "" %> value="Health & Beauty">Health &
+               <option <%=business.category==="Health & Beauty" ? "selected" : "" %> value="Health & Beauty">Health &
                     Beauty</option>
-               <option <%=business.catagory==="Resturant" ? "selected" : "" %> value="Resturant">Resturant</option>
+               <option <%=business.category==="Resturant" ? "selected" : "" %> value="Resturant">Resturant</option>
           </select>
           <form action="/businesses/<%= business._id %>?_method=PUT" method="POST">
                <button class="submit-button" type="submit">Accept Changes</button>

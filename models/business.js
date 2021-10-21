@@ -23,7 +23,7 @@ const businessSchema = new Schema({
     link: String,
     phone: String,
     email: String,
-    catagory: String,
+    category: String,
     reviews: [reviewSchema],
     user: {type: Schema.Types.ObjectId, ref: 'User'},
     favs: [{type: Schema.Types.ObjectId, ref: 'User'}]
