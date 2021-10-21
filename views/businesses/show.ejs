@@ -1,7 +1,10 @@
 <%- include('../partials/header') %>
-
+<br>
   <form action="/businesses/<%= business._id %>/favs" method="POST">
-    <button> ❤️ </button>
+  <button> ❤️ </button>
+  <br>
+  <br>
+  <br>
   </form>
   <section id="show-page" data-businessid="<%= business._id %>">
     <div>Name: </div>
@@ -29,13 +32,15 @@
       <%= business.tag %>
     </div>
   </section>
+  <br>
   <% if (user._id.equals(business.user)) { %>
     <form action="/businesses/<%= business._id %>/edit">
       <button type="submit">Edit Business</button>
     </form>
     <% }%>
-      <br><br>
-      <h2>Reviews</h2>
+    <br><br>
+    <h2>Reviews</h2>
+    <section>
       <div id="reviews-containers">
         <% if (user) { %>
           <form id="add-review-form" method="POST" action="/businesses/<%= business._id %>/reviews">
@@ -103,27 +108,28 @@
                   <h5>No Reviews Yet</h5>
                   <% } %>
             </div>
+          </section>
             <br>
             <br>
             <% if (user._id.equals(business.user)) { %>
-              <div id="delete-form">
-                <button id="start-delete">Delete Business</button>
-              </div>
-              <% }%>
+            <div id="delete-form">
+              <button id="start-delete">Delete Business</button>
+            </div>
+            <% }%>
       </div>
-      <script>
-        const businessID = document.querySelector("#show-page").dataset.businessid;
-        const template = `
+<script>
+  const businessID = document.querySelector("#show-page").dataset.businessid;
+  const template = `
   <h1>Are You Absolutely sure?!?! I mean..come on...</h1>
   <form action="/businesses/${businessID}?_method=DELETE" method="POST">
     <button type="submit">Delete the Business</button>
   </form>
   <a href="/businesses/${businessID}"><button>Cancel(Good Job)</button></a>
   `;
-        document.getElementById("start-delete").addEventListener("click", function () {
-          document.getElementById("delete-form").innerHTML = template;
-        })
-      </script>
+  document.getElementById("start-delete").addEventListener("click", function(){
+    document.getElementById("delete-form").innerHTML= template;
+  })
+</script>
 
 
       <%- include('../partials/footer') %>

@@ -2,31 +2,34 @@
   <br>
   <br>
   <br>
-  <div class=“container”>
-    <% businesses.forEach(function(b) { %>
-      <div class="col">
-        <div class="card" style="width: 18rem;">
-          <img src="<%= b.image_URL %>" class="card-img-top" alt="<%= b.name %>">
-          <div class="card-body">
-            <h5 class="card-title">
-              <%= b.name %>
-            </h5>
-            <p class="card-text">
-              <%= b.description %>
-            </p>
+    <div class="row">
+      <% businesses.forEach(function(b) { %>
+        <div class="col">
+          <div class="card" style="width: 18rem;">
+            <img src="<%= b.image_URL %>" class="card-img-top" alt="<%= b.name %>">
+            <div class="card-body">
+              <h5 class="card-title">
+                <%= b.name %>
+              </h5>
+              <p class="card-text">
+                <%= b.description %>
+              </p>
+            </div>
+            <ul class="list-group list-group-flush">
+              <li class="list-group-item">
+                Catagory:&nbsp;&nbsp;<%= b.catagory %>
+              </li>
+            </ul>
+            <div class="card-body">
+              <% if (user) { %>
+              <a href="/businesses/<%= b._id %>">DETAILS</a>
+              <% } %>
+            </div>
           </div>
-          <ul class="list-group list-group-flush">
-            <li class="list-group-item">
-              Catagory:&nbsp;&nbsp;<%= b.catagory %>
-            </li>
-          </ul>
-          <div class="card-body">
-            <a href="/businesses/<%= b._id %>">DETAILS</a>
-          </div>
+          <br><br>
         </div>
-        <br><br>
-      </div>
-      <% }); %>
-  </div>
+        <% }); %>
+    </div>
+
 
   <%- include('../partials/footer') %>
