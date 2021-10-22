@@ -192,7 +192,10 @@ li {
 }
 
 #reviews-containers div {
-  width: 95vw
+  width: 95vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
 }
 
 #background {
@@ -282,6 +285,14 @@ h3 {
   font-weight: bold;
 }
 
+#review-title {
+  text-align: center;
+}
+#rating-number {
+  text-align: center;
+  height: 3vw;
+}
+
 #add-favs {
   text-align: center;
 }
@@ -301,6 +312,7 @@ h3 {
 #show-business {
   display: flex;
   flex-direction: column;
+  margin-top: 3vw;
 }
 #top {
   display: flex;

@@ -73,7 +73,7 @@
   
   <br>
   <br><br>
-  <h2>Reviews</h2>
+  <h2 id="review-title">Reviews</h2>
   <section>
     <div id="reviews-containers">
       <% if (user) { %>
@@ -82,16 +82,17 @@
           <select id="rating-number" name="rating">
             <option value="1">1</option>
             <option value="2">2</option>
-            <option value="3">3</option>
+            <option selected value="3">3</option>
             <option value="4">4</option>
             <option value="5">5</option>
           </select>
+          <br>
+          <br>
           <label>Leave a Review:</label>
           <textarea name="content"></textarea>
           <input type="submit" value="Add Review">
         </form>
         <% } %>
-          <br>
           <br>
           <div id="review-list">
             <% if (business.reviews.length) { %>
@@ -109,7 +110,7 @@
                     <% business.reviews.forEach(function(r) { %>
                       <% total +=r.rating %>
                         <tr>
-                          <td class="review-user"><img src="<%= r.userAvatar %>" alt="avatar">
+                          <td class="review-user"><img src="<%= r.userAvatar %>" alt="avatar"> &nbsp;&nbsp;
                             <%= r.userName %>
                           </td>
                           <td>
