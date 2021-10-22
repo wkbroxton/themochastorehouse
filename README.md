@@ -16,8 +16,8 @@ This concept has been a dream passion project for years. We've talked through it
 
 
 Here is the link to my Trello Board for planning:
-
-[Trello Board](https://trello.com/b/pfjWGpDT)
+<br>
+[TMS Trello Board](https://trello.com/b/pfjWGpDT/the-mocha-storehouse-business-directory)
 
 
 ## Technologies Used: 
