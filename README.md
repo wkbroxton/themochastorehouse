@@ -31,7 +31,7 @@ This concept has been in the making for over a decade. My wife and I met in coll
   ### SHOUT OUTS: 
    >[CSS Tricks](https://css-tricks.com/write-code-get-confetti/)
    
-   Jim Clark & Chris Ogilvy for the constant guidance and encourement to aim high.
+   Jim Clark & Chris Ogilvy for the constant guidance and encouragement to aim high.
 
    Jonathan Pena-Loa for being a consistent trouble shooting partner.
 
@@ -44,22 +44,6 @@ Here is the link to deploy the web application:
  >## [Link to The Mocha Storehouse](https://mocha-storehouse.herokuapp.com/)
 
 
-<!-- ##  General
-    Game Instructions:
-### Press the Engage! button to start the game. 
-
->THE DECK
->>The deck is divided evenly, with each player receiving 26 cards, dealt one at a time, face down. Anyone may deal first. Each player has their stack of cards face down, in front of them.
-
->THE PLAY
->>Each player turns up a card at the same time and the player with the higher card adds both cards and puts them, face down, on the bottom of their stack. If the cards are the same rank, it is War. Each player turns up two cards face down and one card face up. The player with the higher cards takes both piles (eight cards). If the turned-up cards are again the same rank, the war status continues until the tie is broken or a player runs out of cards, which would be a loss.
-
->HOW TO KEEP SCORE
->>The score is kept numerically between the players two decks. The game ends when one player has all 52 cards.
-    
-
->>Rules rendered in part from [Bicycle Games](https://bicyclecards.com/how-to-play/war/) -->
-
 ## Next Steps: Planned future enhancements: 
 
     AAU & General Icebox Items:
@@ -70,4 +54,3 @@ Here is the link to deploy the web application:
 * AAU, I'd like to be able to see and search business by category.
 * Display an informatonal key for specifics on Business Categories.
 * Improved mobile device viewports.
-* A diagonal line that works in tow with the players Deck count to show the battle in a multifaced way.
