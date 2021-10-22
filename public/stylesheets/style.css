@@ -22,7 +22,6 @@ body > nav {
   display: flex;
   justify-content: flex-end;
   align-items: center;
-  padding: 0 30px 0 50px;
 }
 
 nav > img {
@@ -196,7 +195,6 @@ li {
 }
 
 #reviews-containers div {
-  /* width: 95vw; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -277,7 +275,12 @@ a:visited {
 .col {
   margin: 10px;
   text-align: center;
-  padding: 5px;
+  align-content: center;
+  padding-left: 65px;
+}
+
+#card {
+  text-align: center;
 }
 
 h3 {
