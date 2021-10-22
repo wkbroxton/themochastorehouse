@@ -44,7 +44,7 @@ Here is the link to my Trello Board for planning:
 <br>
 Here is the link to deploy the web application:
 <br>
-[Link to The Mocha Storehouse](https://mocha-storehouse.herokuapp.com)
+[The Mocha Storehouse](https://mocha-storehouse.herokuapp.com/)
 <br><br>
 
 ## Next Steps: Planned future enhancements: 
