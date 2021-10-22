@@ -126,6 +126,10 @@ table td {
   justify-content: center;
 }
 
+#No-R {
+  width: 100%;
+}
+
 #add-review-form input[type="submit"]  {
   width: 10rem;
   margin: 0 auto;
@@ -192,7 +196,7 @@ li {
 }
 
 #reviews-containers div {
-  width: 95vw;
+  /* width: 95vw; */
   display: flex;
   align-items: center;
   justify-content: center;
@@ -273,6 +277,7 @@ a:visited {
 .col {
   margin: 10px;
   text-align: center;
+  padding: 5px;
 }
 
 h3 {
@@ -283,6 +288,14 @@ h3 {
   margin-inline-start: 0px;
   margin-inline-end: 0px;
   font-weight: bold;
+}
+
+h5 {
+  justify-content: center;
+}
+
+h2 {
+  text-align: center;
 }
 
 #review-title {
@@ -342,7 +355,7 @@ h3 {
 }
 
 #show-page {
-  font-size: 30px;
+  font-size: 25px;
 }
 
 .center {
@@ -351,6 +364,12 @@ h3 {
   justify-content: center;
   align-items: center;
   margin-top: 3vmin;
+}
+
+#row {
+  display: flex;
+  align-self: center;
+  text-align: center;
 }
 
 /* Landscape */
