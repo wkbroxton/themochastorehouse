@@ -27,7 +27,7 @@ Here is the link to my Trello Board for planning:
 
     ExpressJS, NodeJS
     
-    MongoDB, MongooseJavaScript
+    MongoDB, Mongoose, JavaScript
     
     CSS, Bootstrap
 
